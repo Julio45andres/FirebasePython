@@ -47,7 +47,7 @@ def basic():
             user = auth.sign_in_with_email_and_password(email, password)
             # id_token = auth.get_account_info(user['idToken'])
             print(user["idToken"])
-            return render_template('new.html', s=successful)
+            return render_template('new.html', s=user["idToken"])
         except:
             return render_template('new.html', us=unsuccessful)
 
