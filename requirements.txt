@@ -20,3 +20,4 @@ rsa==4.0
 six==1.12.0
 Werkzeug==0.14.1
 firebase-admin
+python-dotenv
