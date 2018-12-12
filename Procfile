@@ -1,1 +1,1 @@
-web: python Auth/app.py
+web: gunicorn wsgi --log-file=-

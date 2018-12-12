@@ -3,7 +3,7 @@ import firebase_admin
 from firebase_admin import credentials, auth
 from flask import *
 import os
-app = Flask(__name__)
+application = Flask(__name__)
 config = {
     "apiKey": "AIzaSyBYHpRerd0Dit9PnuF8e4JcxSj34fZqPbw",
     "authDomain": "renty-vue.firebaseapp.com",
@@ -36,7 +36,7 @@ auth = firebase.auth()
 # print(custom_token)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def basic():
     unsuccessful = 'Login unsuccessful'
     successful = 'Login successful'
@@ -55,4 +55,4 @@ def basic():
 
 
 if __name__ == '__main__':
-    app.run()
+    application.run()
